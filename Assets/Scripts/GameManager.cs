@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI scoreDisplay;
     public TextMeshProUGUI livesDisplay;
+    public float lives;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lives--;
+
         GetComponent<TextMeshProUGUI>().text = "score:" + 10;
-        GetComponent<TextMeshProUGUI>().text = "lives:" - 1;
+        GetComponent<TextMeshProUGUI>().text = "lives:" + lives;
     }
 }
